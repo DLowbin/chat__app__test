@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { FilterType } from './todoTypes';
 import { RootState } from '~/app/store';
 
-const initialState: FilterType = 'all';
+const initialState: FilterType = null as FilterType;
 
 const filterSlice = createSlice({
 	name: 'filter',
