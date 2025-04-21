@@ -1,0 +1,22 @@
+.filterblock {
+	margin-top: 8px;
+	display: flex;
+	flex-direction: row;
+	gap: 6px;
+	justify-content: center;
+
+	&__button {
+		outline: none;
+		background: #3b3b3b;
+		border-radius: 12px;
+		padding: 0.4em 0.5em;
+		font-size: 1em;
+		font-weight: 500;
+		cursor: pointer;
+		transition: border-color 0.25s;
+
+		&--active {
+			transform: scale(1.2);
+		}
+	}
+}

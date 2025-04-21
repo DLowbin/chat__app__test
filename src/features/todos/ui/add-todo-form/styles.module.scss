@@ -1,0 +1,82 @@
+.addtodo {
+	position: relative;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 16px;
+	border-radius: 16px;
+	background: #e0e0e0;
+	transition: box-shadow 0.2s, letter-spacing 0.2s;
+
+	&:hover {
+		box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+		letter-spacing: 2px;
+		transition: box-shadow 0.2s, letter-spacing 0.2s;
+	}
+
+	&:focus-within {
+		box-shadow: inset 25px 25px 47px #a6a6a6, inset -25px -25px 47px #ffffff;
+		transition: box-shadow 0.5s;
+
+		.addtodo__input::placeholder {
+			transform: translateX(0%);
+		}
+
+		& button {
+			border: none;
+			border-radius: 8px;
+			outline: none;
+			padding: 12px;
+			background: linear-gradient(145deg, #f0f0f0, #cacaca);
+			box-shadow: 9px 9px 18px #a6a6a6, -9px -9px 18px #ffffff;
+			color: rgba(0, 0, 0, 0.8);
+		}
+		.addtodo__input::placeholder {
+			transform: translateX(0%);
+			transition: transform 0.2s ease;
+		}
+	}
+	&__label {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		color: rgba(0, 0, 0, 0.8);
+		font-size: 18px;
+		pointer-events: none;
+		transition: transform 0.3s ease, left 0.3s ease, opacity 0.3s ease;
+		white-space: nowrap;
+		opacity: 1;
+	}
+
+	&:focus-within &__label {
+		left: 16px;
+		transform: translateY(-50%);
+		opacity: 0;
+	}
+
+	&__input {
+		color: rgba(0, 0, 0, 0.8);
+		border: none;
+		background: transparent;
+		width: 100%;
+		font-size: 18px;
+		outline: none;
+	}
+
+	& button {
+		border: none;
+		outline: none;
+		padding: 12px;
+		background: transparent;
+		color: #e0e0e0;
+		transition: 0.2s ease-in-out;
+
+		&:active {
+			background: linear-gradient(145deg, #cacaca, #f0f0f0);
+			box-shadow: 9px 9px 18px #a6a6a6, -9px -9px 18px #ffffff;
+		}
+	}
+}
